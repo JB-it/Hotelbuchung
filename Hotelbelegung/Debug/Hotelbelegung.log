@@ -1,0 +1,6 @@
+﻿  Hotelbelegung.cpp
+C:\Users\JBL\source\repos\Hotelbelegung\Hotelbelegung\Hotelbelegung.cpp(85,23): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
+C:\Users\JBL\source\repos\Hotelbelegung\Hotelbelegung\Hotelbelegung.cpp(121,23): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
+C:\Users\JBL\source\repos\Hotelbelegung\Hotelbelegung\Hotelbelegung.cpp(176,23): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
+C:\Users\JBL\source\repos\Hotelbelegung\Hotelbelegung\Hotelbelegung.cpp(224,23): warning C4018: "<": Konflikt zwischen "signed" und "unsigned"
+  Hotelbelegung.vcxproj -> C:\Users\JBL\source\repos\Hotelbelegung\Debug\Hotelbelegung.exe
