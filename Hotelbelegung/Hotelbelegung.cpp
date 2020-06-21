@@ -37,6 +37,14 @@ int main()
         zimmer[i] = false;
     }
 
+    //Gibt eine Startinformation aus
+    cout << "Herzlich wilkommen zum Programm \"Hotelbelegung\"," << endl;
+    cout << "einem Projekt von Jonas Bluemer, Niko Drobe und Yannick Angenendt." << endl << endl;
+    cout << "Das Hotel besitzt 6 Etagen mit jeweils 10 Zimmern pro Etage." << endl;
+    cout << "Alle Angaben zur Etage und Zimmernummer muessen in indexen (ab 0 startend) angegeben werden." << endl;
+    cout << "Fuer Supportanfragen wenden Sie sich bitte an einen von uns." << endl << endl;
+    cout << "Fuer eine Liste aller befehle geben sie bitte 'hilfe' ein." << endl;
+
     //Das Programm soll nicht von alleine stoppen
     bool run = true;
     while (run) {
@@ -63,7 +71,7 @@ int main()
                 break;
             default:
                 cout << "Die Eingabe konnte leider nicht ausgewertet werden." << endl;
-                cout << "Geben Sie 'help' ein, um eine Lister aller befehle zu erhalten." << endl << endl;
+                cout << "Geben Sie 'hilfe' ein, um eine Lister aller befehle zu erhalten." << endl << endl;
         }
     }
     return 0;
@@ -104,7 +112,7 @@ vector<string> splitString(string source, char delimiter) {
 void printHelp() {
     //Druckt alle Befehle in der Konsole aus
     cout << endl;
-    cout << "'help': Gibt eine liste aller Befehle aus" << endl;
+    cout << "'hilfe': Gibt eine liste aller Befehle aus" << endl;
     cout << "'status [-e -n]': Gibt den Status aller Zimmer aus." << endl;
     cout << "\t -e: Waehlt die Etage aus" << endl;
     cout << "\t -n: Waehlt die Raumnummer aus (Funktioniert nur in Kombination mit '-e')" << endl;
@@ -240,7 +248,7 @@ void checkOut(bool* zimmer, vector<string> params) {
         if (params.at(i) == "-e") {
             e = stoi(params.at(++i));
         }
-        if (e > 0 && params.at(i) == "-n") {
+        if (e > -1 && params.at(i) == "-n") {
             n = stoi(params.at(++i));
         }
     }
@@ -254,5 +262,8 @@ void checkOut(bool* zimmer, vector<string> params) {
             zimmer[e * 10 + n] = false;
             cout << "Der Raum mit der Nummer " << n << " in Etage " << e << " ist nun frei." << endl;
         }
+    }
+    else {
+        cout << "Bitte geben Sie eine valide Etage und eine valide Zimmernummer ein." << endl;
     }
 }
